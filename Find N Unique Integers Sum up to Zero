@@ -1,0 +1,10 @@
+class Solution:
+    def sumZero(self, n: int) -> List[int]:
+        if n%2 == 0:
+            l=list(range((-n//2),(n//2)+1))-[0]
+        
+        else:
+            l=list(range((-n//2)+1,(n//2)+1))
+                
+            
+        return l
