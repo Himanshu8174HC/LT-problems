@@ -1,0 +1,12 @@
+for _ in range(int(input())):
+    n =int(input())
+    arr=list(map(int,input().split()))
+    d={}
+    for i in arr:
+        if i in d:
+            d[i] += 1
+        else:
+            d[i] = 1
+    temp=min(d.values())
+    temp1=max(d.values())
+    print(temp1-temp)
