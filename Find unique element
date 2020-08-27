@@ -1,0 +1,9 @@
+for _ in range(int(input())):
+    n , k=map(int,input().split())
+    arr=list(map(int,input().split()))
+    d={}
+    for i in arr:
+        d[i]=arr.count(i)
+    for key,value in d.items():
+        if value==1:
+            print(key)
