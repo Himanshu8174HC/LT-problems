@@ -1,3 +1,16 @@
 class Solution:
     def minMoves(self, nums: List[int]) -> int:
         return sum(nums) - min(nums)*len(nums)
+        
+######################################################################
+ 
+class Solution:
+    def minMoves(self, nums: List[int]) -> int:
+        moves:int = 0
+        min_value:int = min(nums)
+		
+        for element in nums:
+            difference = element - min_value
+            moves += difference
+            
+        return moves
