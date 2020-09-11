@@ -25,3 +25,10 @@ for i in range(3):
         if j>i:
             print(m[i][j],end=" ")
     print()
+    
+print("Digonal  of Matrix is .......")
+for i in range(3):
+    for j in range(3):
+        if j==i:
+            print(m[i][j],end=" ")
+    print()
