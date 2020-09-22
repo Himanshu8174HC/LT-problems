@@ -12,7 +12,7 @@ class Solution:
                 return True
             else: 
                 dictionary[head]= True
-                print(dictionary)
+              
             head = head.next
         
 ############################################
