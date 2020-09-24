@@ -15,7 +15,7 @@ class Solution:
             else:
                 S=Q
                 Q=S.next
-            new_Node = S
+            new_head = S
         while P and Q:
             if P.val<=Q.val:
                 S.next = P
@@ -29,4 +29,4 @@ class Solution:
             S.next = Q
         if not Q:
             S.next = P
-        return new_Node
+        return new_head
