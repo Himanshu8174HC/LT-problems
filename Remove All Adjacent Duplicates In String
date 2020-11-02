@@ -1,0 +1,24 @@
+class Solution:
+    def removeDuplicates(self, S: str) -> str:
+        stack = []
+        for i in S:
+            if len(stack) == 0:
+                stack.append(i)
+            elif stack[-1] == i:
+                stack.pop()
+            
+            else:
+                stack.append(i)
+        return "".join(stack)
+        
+#####################################################More Efficient
+class Solution:
+    def removeDuplicates(self, S: str) -> str:
+        stack = [S[0]]
+        for i in S[1:]:            
+            if stack and i == stack[-1]:
+                stack.pop()
+            else:
+                stack.append(i)
+        stack = ''.join(stack)                
+        return stack
