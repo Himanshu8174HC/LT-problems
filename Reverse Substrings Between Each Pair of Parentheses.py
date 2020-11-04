@@ -11,4 +11,22 @@ class Solution:
         s=s.replace('(','')
         s=s.replace(')' , '')
         return s
+
+    
+############################################################### More Efficient
+
+stack = []
+reverse = []
+        
+        for i in range(len(s)):
+            if s[i] == ')':  # pop the substring between nearest parentheses
+                p = stack.pop()
+                while p != '(':
+                    reverse.append(p)
+                    p = stack.pop()
+                stack += reverse
+                reverse = []
+            else:
+                stack.append(s[i])
+        return ''.join(stack)
         
