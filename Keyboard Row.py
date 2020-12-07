@@ -1,3 +1,5 @@
+##########################################################################Dictionary Solution
+
 class Solution:
     def findWords(self, words: List[str]) -> List[str]:
         ans = []
@@ -25,6 +27,23 @@ class Solution:
             if same:
                 ans.append(i)
         return ans
+    
+#############################################################SET Solution
+class Solution:
+    def findWords(self, words: List[str]) -> List[str]:
+        r1 = set('qwertyuiop')
+        r2 = set('asdfghjkl')
+        r3 = set('zxcvbnm')
+        
+        ans = []
+        for i in words:
+            x = set(i.lower())
+            if x.issubset(r1) or x.issubset(r2) or x.issubset(r3):
+                        
+                ans.append(i)
+                    
+        return ans
+            
                     
             
             
