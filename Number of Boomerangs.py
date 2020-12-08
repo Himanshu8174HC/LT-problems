@@ -14,7 +14,7 @@ class Solution:
                     d[l] +=1
                
             for key, value in d.items():
-                ans = value *(value-1) + ans
+                ans = value *(value-1) + ans ########### How many possibilty to arrange that points
         
         return ans
             
