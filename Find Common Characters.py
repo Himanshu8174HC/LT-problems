@@ -1,7 +1,7 @@
 class Solution:
     def commonChars(self, A: List[str]) -> List[str]:
         d1 = Counter(A[0])
-        for i in A:
+        for i in A[1:]:
             d2 = Counter(i)
             for k in d1:
                 if k in d2:
