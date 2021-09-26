@@ -1,0 +1,43 @@
+class Solution:
+    def generateMatrix(self, n: int) -> List[List[int]]:
+        top = 0
+        down  = n - 1
+        left = 0
+        right = n - 1
+        
+        ans= [[0 for i in range(n)]for j in range(n)]
+        t = 1
+        direction = 0
+        while top <= down and left <= right:
+            if direction == 0:
+                for i in range(left, right+1):
+                    ans[top][i] = t
+                    
+                    t += 1
+                    
+                top += 1
+            
+            elif direction == 1:
+                for i in range(top, down+1):
+                    ans[i][right] = t
+                    
+                    t += 1
+                right -= 1
+            
+            elif direction == 2:
+                for i in reversed(range(left, right+1)):
+                    ans[down][i] = t
+                    
+                    t += 1
+                down -= 1
+            
+            elif direction == 3:
+                for i in reversed(range(top, down+1)):
+                    ans[i][left] = t
+                    
+                    t += 1
+                    
+                left += 1
+            direction = (direction + 1) % 4
+        return ans
+        
